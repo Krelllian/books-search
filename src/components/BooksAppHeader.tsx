@@ -25,7 +25,7 @@ const BooksAppHeader = () => {
                     <h1 className='header__title'>Search for books</h1>
                     <div className='header__input-wrapper'>
                         <input onChange={handleInput} onKeyPress={handelEnterPress} className='header__input' placeholder='Book name'></input>
-                        <button onClick={() => dispatch(getBooks())} className='header__input-btn' ></button>
+                        <button onClick={() => dispatch(getBooks())} className='header__input-btn' aria-label="search books"></button>
                     </div>
                     <div className='header__sorts sorts'>
                         <Sorts />
