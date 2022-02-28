@@ -16,8 +16,11 @@
 
 .header__select-label--categories {
     margin-right: 40px;
+    @media (max-width: 530px) {
+        margin-right: 0;
+    }
 }
 
 .header__select-label--sorting-by {
-    margin-left: 3px;
+    align-self: end;
 }
