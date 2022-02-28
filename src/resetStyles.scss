@@ -1,0 +1,56 @@
+
+/* preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* removes padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* removes margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* remove list styles (bullets/numbers)*/
+ul,
+ol {
+  list-style: none;
+}
+
+/* for images to not be able to exceed their container */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* inherit font for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* removes outline for inputs */
+input {
+  outline: none;
+}

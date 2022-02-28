@@ -1,0 +1,140 @@
+.books {
+    margin-top: 20px;
+}
+
+.books__content {
+    margin-bottom: 30px;
+}
+
+.books__count {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.books__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 25px;
+    @media (max-width:1020px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width:740px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width:490px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.books-card {
+    background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px 15px;
+    cursor: pointer;
+    & img {
+        height: 250px;
+        margin-bottom: 30px;
+    }
+}
+
+.books-card__categories {
+    width: 100%;
+    color: #9ea1a4;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.books-card__title {
+     width: 100%;
+     margin-bottom: 10px;
+     font-size: 20px;
+     font-weight: 600;
+}
+
+.books-card__autor {
+    width: 100%;
+     color: #9ea1a4;
+}
+
+.books__load-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin: 30px 0;
+    padding: 15px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.card-detailed {
+    display: grid;
+    grid-template-columns: 370px 3fr;
+    width: 100%;
+    justify-content: center;
+    @media (max-width:750px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-detailed__img-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #ebebeb;
+    padding: 15px 50px;
+    max-height: 530px;
+    @media (max-width:750px) {
+        padding: 15px;
+    }
+    & img {
+        height: 500px;
+        @media (max-width:750px) {
+            grid-template-columns: 1fr;
+            height: 400px;
+        }
+    }
+}
+
+.card-detailed__content {
+    padding: 15px 20px;
+    @media (max-width:750px) {
+        padding: 15px 0;
+    }
+}
+
+.card-detailed__categories {
+    margin-bottom: 30px;
+    font-size: 20px;
+    color: #585858;
+}
+
+.card-detailed__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    @media (max-width:750px) {
+        font-size: 26px;
+    }
+}
+
+.card-detailed__autors {
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #9ea1a4;
+    text-decoration: underline;
+}
+
+.card-detailed__description {
+    display: block;
+    padding: 15px;
+    border: 1px solid gray;
+    height: 300px;
+    overflow-y: scroll;
+}
+

@@ -1,0 +1,23 @@
+.header__select-label {
+    font-size: 20px;
+    color: white;
+}
+
+.header__select {
+     height: 35px;
+     width: 120px;
+     margin-left: 10px;
+     font-size: 16px;
+     cursor: pointer;
+     outline: none;
+     color: rgb(107, 107, 107);
+     font-weight: 600;
+}
+
+.header__select-label--categories {
+    margin-right: 40px;
+}
+
+.header__select-label--sorting-by {
+    margin-left: 3px;
+}
