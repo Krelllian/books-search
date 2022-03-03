@@ -2,16 +2,15 @@ import React from 'react'
 import './Books.scss'
 import { useSelector, useDispatch } from 'react-redux'
 import { loadMoreBooks, setBooksDisplay, setBookCardDisplay, getBookCardById } from '../reduxToolkit/BooksSearchSlice'
-import { IStore } from '../common/interfaces/reduxStoreInterfaces'
+import { IStore, IBooks, IData } from '../common/interfaces/reduxStoreInterfaces'
 import Preloader from './Preloader'
 
 const Books = () => {
     const dispatch = useDispatch()
+    const booksData = useSelector((state: IStore) => state.books.data)
+    const { booksCount, booksDisplay, startIndex, bookCardDisplay, currentBookCardData, loading } = useSelector((state: IStore) => state.books)
 
-    const booksData: any = useSelector<IStore>(state => state.books.data)
-    const { booksCount, booksDisplay, startIndex, bookCardDisplay, currentBookCardData, loading }: any = useSelector<IStore>(state => state.books)
-
-    const cardHandler: React.MouseEventHandler<HTMLDivElement> = (bookId) => {
+    const cardHandler = (bookId: number) => {
         dispatch(setBooksDisplay(false))
         dispatch(getBookCardById(bookId))
         dispatch(setBookCardDisplay(true))
@@ -26,7 +25,7 @@ const Books = () => {
                         <>
                             <p className='books__count'>Found {booksCount} results</p>
                             {booksCount === 0 ? '' : (<div className='books__grid'>
-                                {booksData?.map((book: any, i: any) => (
+                                {booksData?.map((book, i) => (
                                     <div onClick={() => cardHandler(book.id)} key={book.etag + book.id} className='books__books-card books-card'>
                                         <img src={book.volumeInfo.imageLinks?.thumbnail}></img>
                                         <p className='books-card__categories'>{book.volumeInfo?.categories?.join(', ')}</p>

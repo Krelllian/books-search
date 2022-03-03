@@ -1,11 +1,11 @@
 
 export interface IStore {
-    books: IBooks,
+    books: IBooks
 }
 
 export interface IBooks {
     data: IData[],
-    currentBookCardData: {},
+    currentBookCardData: IData | any,
     search: string,
     maxResults: number,
     startIndex: number,
@@ -21,5 +21,15 @@ export interface IBooks {
 }
 
 export interface IData {
-
+    id: number
+    etag: string
+    volumeInfo: {
+        imageLinks?: {
+            thumbnail: string
+        }
+        description: string
+        title: string
+        authors: string[]
+        categories: string[]
+    }
 }

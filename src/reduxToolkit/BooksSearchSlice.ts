@@ -9,7 +9,7 @@ const q = 'js'
 
 const initialState: IBooks = {
     data: [],
-    currentBookCardData: {},
+    currentBookCardData: [],
     search: '',
     maxResults: 30,
     startIndex: 30,
